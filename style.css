@@ -196,12 +196,13 @@ h3 {
 }
 /* footer */
 footer {
-    background-color: var(--clr-neutral-grayish-blue);
-    padding: 4em 0;
+    background-color: rgb(245, 246, 248);
+    padding: 3rem 0;
 }
 
 .footer-content {
     flex-direction: column;
+    gap: 2rem;
 }
 
 .footer-content > img {
@@ -210,10 +211,17 @@ footer {
 
 .footer-links {
     display: grid;
+    gap: 2rem;
 }
 
 .footer-links a {
     color: var(--clr-neutral-dark-grayish-blue);
+    font-weight: var(--fw-regular);
+    font-size: 1.125em;
+}
+
+.socials {
+    justify-content: space-evenly;
 }
 
 
