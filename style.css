@@ -1,0 +1,221 @@
+/* ### Primary
+
+- Strong Cyan: hsl(171, 66%, 44%)
+- Light Blue: hsl(233, 100%, 69%)
+
+### Neutral
+
+- Dark Grayish Blue: hsl(210, 10%, 33%)
+- Grayish Blue: hsl(201, 11%, 66%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px */
+
+:root {
+    --clr-primary-strong-cyan: hsl(171, 66%, 44%);
+    --clr-primary-light-blue: hsl(233, 100%, 69%);
+    
+    --clr-neutral-dark-grayish-blue: hsl(210, 10%, 33%);
+    --clr-neutral-grayish-blue: hsl(201, 11%, 66%);
+    --clr-neutral-white: rgb(255, 255, 255);
+
+
+    --ff-primary:'Bai Jamjuree', sans-serif;
+
+    --fw-regular: 400;
+    --fw-semiBold: 600;
+
+    --fs-primary: 1rem;
+
+    --section-spacing: 7.75rem;
+    --lh-p: 1.6rem;
+}
+/* RESET */
+/* 1. Use a more-intuitive box-sizing model. */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+/* 3. Allow percentage-based heights in the application */
+html, body {
+    min-height: 100%;
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100vh;
+}
+/* 7. Remove built-in form typography styles */
+input, button, textarea, select {
+    font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/* 9. Create a root stacking context */
+#root, #__next {
+    isolation: isolate;
+}
+
+img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3 {
+    color: var(--clr-neutral-dark-grayish-blue);
+    font-weight: var(--fw-semiBold);
+}
+
+p {
+    color: var(--clr-neutral-grayish-blue);
+    line-height: var(--lh-p);
+    margin: 1rem 0;
+}
+
+a { 
+    text-decoration: none;
+    font-weight: var(--fw-semiBold);
+    font-size: var(--fs-base);    
+}
+
+/* global classes */
+.flex {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.buttons-container {
+    flex-direction: column;
+    gap: 1.75rem;
+    padding: 2em 0;
+}
+
+.buttons-container .button {
+    color: var(--clr-neutral-white);
+    font-size: 1.0625em;
+    letter-spacing: 1px;
+
+    padding: 0.9375em;
+    border-radius: 3rem;
+}
+
+.buttons-container .button:first-child {    
+    background-color: var(--clr-primary-strong-cyan);
+    box-shadow: 0px 1px 0px 2px hsl(171, 66%, 39%);
+}
+
+.buttons-container .button:last-child {    
+    background-color: var(--clr-primary-light-blue);
+    box-shadow: 0px 1px 0px 2px hsl(233, 100%, 64%);    
+}
+
+
+
+/* layout */
+body {
+    min-height: 100vh;
+
+    background-image: url(./images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    font-family: var(--ff-primary);
+    font-size: var(--fs-primary);
+    text-align: center;
+}
+
+body > header, section, .footer-content {
+    padding: 0 2rem;
+}
+
+body > header, section {
+    margin: var(--section-spacing) 0;
+}
+/* header */
+h1 {
+    margin-top: 4rem;
+    letter-spacing: -1px;
+    font-size: 2em;
+}
+
+/* track */
+h2 {
+    font-size: 1.75em;
+}
+
+.img-container {
+    margin: 3rem 0;
+}
+
+.track__properties {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.track__properties article > p {
+    margin: .75rem 0 3rem;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+/* access */
+.access img {
+    margin-top: 4rem;
+}
+/* workflow */
+.workflow__tools {
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+.workflow__tools .tool {
+    flex-direction: column;
+}
+
+.tool img {
+    margin-bottom: 3rem;
+}
+/* corporations  */
+.corporations {
+    flex-direction: column;
+    gap: 4rem;
+}
+/* footer */
+footer {
+    background-color: var(--clr-neutral-grayish-blue);
+    padding: 4em 0;
+}
+
+.footer-content {
+    flex-direction: column;
+}
+
+.footer-content > img {
+    width: 3.5rem;
+}
+
+.footer-links {
+    display: grid;
+}
+
+.footer-links a {
+    color: var(--clr-neutral-dark-grayish-blue);
+}
+
+
+
+
